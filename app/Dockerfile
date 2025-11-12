@@ -1,15 +1,15 @@
 
 FROM ruby:2.6.3
 
-RUN bundle config --global frozen 1
+ENV LANG=C.UTF-8 \
+    BUNDLE_JOBS=4 \
+    BUNDLE_RETRY=3
 
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
 
-RUN apt-get update -qq && apt-get install -y build-essential
-
-RUN gem install bundler && bundle install
+RUN gem install bundler -v 2.4.22 && bundle install
 
 COPY . .
 
