@@ -10,6 +10,6 @@ RUN bundle install --jobs 4 --retry 3
 
 COPY . .
 
-EXPOSE 3000, 4567
+EXPOSE 4567
 
-CMD ["./simpsons_simulator.rb"]
+CMD ["bundle", "./simpsons_simulator.rb"]
