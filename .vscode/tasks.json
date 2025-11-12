@@ -4,11 +4,11 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "run-production",
+            "label": "test-production",
             "type": "shell",
             "command": "make",
             "args": [
-                "run-production"
+                "test-production"
             ],
             "options": {
                 "cwd": "${workspaceFolder}/app"
