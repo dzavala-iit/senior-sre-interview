@@ -7,8 +7,12 @@ WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
 
+RUN apt-get update -qq && apt-get install -y build-essential
+
+RUN gem install bundler && bundle install
+
 COPY . .
 
 EXPOSE 4567
 
-CMD ["bundle", "./simpsons_simulator.rb"]
+CMD ["ruby", "./simpsons_simulator.rb"]
