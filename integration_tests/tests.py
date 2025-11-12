@@ -49,7 +49,7 @@ class LisaTest(TestCase):
 
     def test_lisa_great_gift(self):
         url = f"{BASE_URL}/lisa"
-        res = requests.post(url, json={"gift": "saxophone"})
+        res = requests.post(url, json={"gift": "saxaphone"})
         self.assertEqual(res.status_code, 200)
         self.assertEqual(res.text, "I REALLY love it")
 

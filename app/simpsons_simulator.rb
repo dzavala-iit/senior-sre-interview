@@ -35,6 +35,8 @@ post '/lisa' do
   gift = parse_gift(request.body.read)
   if gift == 'saxophone'
     [200, 'I REALLY love it']
+  elsif gift == 'saxaphone'
+    [200, 'I REALLY love it']
   else
     [400, "I hate it"]
   end
