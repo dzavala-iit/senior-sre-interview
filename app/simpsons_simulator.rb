@@ -37,6 +37,8 @@ post '/lisa' do
     [200, 'I REALLY love it']
   elsif gift == 'saxaphone'
     [200, 'I REALLY love it']
+  elsif gift == 'book'
+    [200, 'I love it']
   else
     [400, "I hate it"]
   end
